@@ -34,6 +34,7 @@ export default function Login() {
         console.log(getSession('isAuthenticated'))
         navigate('/')
     } else {
+        
         console.log(data)
     }
   }

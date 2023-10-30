@@ -9,6 +9,7 @@ import Dashboard from './components/Dashboard';
 import { getSession } from './utils/sessionMethods';
 import EditCourse from './components/EditCourse';
 import CourseVideos from './components/CourseVideos';
+import MyCourses from './components/MyCourses';
 
 function App() {
    return (
@@ -19,6 +20,7 @@ function App() {
         <Route index element={<Dashboard />} />
         <Route path='editCourse/:id' element={<EditCourse />} />
         <Route path='courseVideos/:course_id' element={<CourseVideos />} />
+        <Route path='myCourses' element={<MyCourses />} />
       </Route>
     </Routes>
   );

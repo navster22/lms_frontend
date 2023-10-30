@@ -22,6 +22,7 @@ export default function Sidebar() {
   return (
     <div className='d-flex flex-column align-items-center bg-light' style={{height: '100vh', width: '300px'}}>
         <Link to='/' className='link-underline-opacity-0 link-info'>Courses</Link>
+        <Link to='/myCourses' className='link-underline-opacity-0 link-info'>My Courses</Link>
         <Button className='mt-3 w-50 rounded rounded-3' variant="danger" type="submit" onClick={logout}>
             Log Out
         </Button>

@@ -7,6 +7,7 @@ import AddCourseVideo from './AddCourseVideo';
 import Button from 'react-bootstrap/Button';
 import apiconnection from '../apiconnection';
 import { apiEndpoints, httpMethods } from '../constants/constant';
+import { getSession } from '../utils/sessionMethods';
 
 export default function CourseVideos() {
 
@@ -30,9 +31,9 @@ export default function CourseVideos() {
 
   return (
     <div>
-    <Button variant="primary" onClick={() => setModalShow(true)}>
+    { getSession('userType') === 'teacher' && <Button variant="primary" onClick={() => setModalShow(true)}>
         Add Course Videos
-    </Button>
+    </Button>}
     {courseVideos.length > 0 ? courseVideos.map((item, idx) => (
          <Card>
          <Row>
